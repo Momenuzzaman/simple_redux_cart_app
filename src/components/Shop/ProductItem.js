@@ -22,7 +22,7 @@ const ProductItem = (props) => {
         </header>
         <p>{description}</p>
         <div className={classes.actions}>
-          <button onCLick={addCartHandler}>Add to Cart</button>
+          <button onClick={addCartHandler}>Add to Cart</button>
         </div>
       </Card>
     </li>
