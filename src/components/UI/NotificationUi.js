@@ -1,18 +1,17 @@
+import React from 'react';
+import classes from './NotificationUi.module.css'
 
-import classes from './Notification.module.css';
-
-const Notification = (props) => {
+const NotificationUi = (props) => {
     let specialClasses = '';
+
+    const cssClasses = `${classes.notification} ${specialClasses}`;
 
     if (props.status === 'error') {
         specialClasses = classes.error;
     }
     if (props.status === 'success') {
-        specialClasses = classes.success;
-    }
-
-    const cssClasses = `${classes.notification} ${specialClasses}`;
-
+        specialClasses = classes.success
+    };
     return (
         <section className={cssClasses}>
             <h2>{props.title}</h2>
@@ -21,4 +20,4 @@ const Notification = (props) => {
     );
 };
 
-export default Notification;
+export default NotificationUi;
